@@ -2,21 +2,25 @@
 
 // Consider this variable:
 
-var mantra = "Be the dev"; ...
+var mantra = "Be the dev";
 
 // 1. Write the code that returns 'B' from mantra.
+mantra.charAt(0)
 
 // 2. Write the code that determines if there is a 'x' in mantra.
+mantra.includes("x") //Should return false, if console logged will print false in the console
 
 // 3. Write the code that determines if there is a 'v' in mantra.
+mantra.includes("v") //Should return true, if console logged will print true in the console
 
 // Stretch: Write the code that returns the position of 'v' in mantra.
-
+var mantraArr = mantra.split("")
+mantraArr.indexOf("v")
 
 // Consider the following statement:
 
-var codingIsEasy
-var imBored
+var codingIsEasy = true
+var imBored = true
 
 if (codingIsEasy && imBored) {
     console.log("I need more!")
@@ -28,8 +32,8 @@ if (codingIsEasy && imBored) {
 
 // Consider the following statement:
 
-var imLost
-var imFrustrated
+var imLost = false
+var imFrustrated = false
 
 if (imLost || imFrustrated) {
     console.log('Break time!')
