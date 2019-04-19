@@ -15,7 +15,7 @@ mantra.includes("v") //Should return true, if console logged will print true in 
 
 // Stretch: Write the code that returns the position of 'v' in mantra.
 var mantraArr = mantra.split("")
-mantraArr.indexOf("v")
+return mantraArr.indexOf("v")
 
 // Consider the following statement:
 
@@ -44,6 +44,13 @@ if (imLost || imFrustrated) {
 // 5. Update the imLost and imFrustated variables above the statement to the values required to log "Keep coding!"
 
 // 6a. Recall the mantra variable from the first question. Write the code that logs each letter of mantra using a for loop.
+function logLetters(word) {
+  var newArray = word.split("")
+  for (let i=0; i<newArray.length; i++) {
+    console.log(newArray[i]);
+  }
+}
+logLetters(mantra)
 
 // Stretch: Using a while loop.
 
@@ -54,6 +61,9 @@ if (imLost || imFrustrated) {
 var message = "thisisateststring"
 
 // 7. Write a function that takes a string like message as an argument and returns the string without vowels.
+function noVowels(msg) {
+
+}
 
 // Stretch: Update your function to throw an exception if the argument is not a string.
 
@@ -64,3 +74,6 @@ var message = "thisisateststring"
 var toonimals = [ {name: 'Itchy', animal: 'mouse'}, {name: 'Stimpy', animal: 'cat'}, {name: 'Daffy', animal: 'duck'}, {name: 'Scratchy', animal: 'cat'}, {name: 'Ren', animal: 'dog'}, {name: 'Felix', animal: 'cat'}]
 
 // 8. Write a function that takes an array like toonimals and returns an array with only the toons that are cats.
+function findCats(arr) {
+  
+}
