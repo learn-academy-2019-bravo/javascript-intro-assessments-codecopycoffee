@@ -72,6 +72,20 @@ function noVowels(msg) {
 }
 console.log(noVowels(message));
 
+//Another way to do it
+removeVowels = (string) => {
+  var vowels = ["a", "e", "i", "o", "u"]
+  var arr1 = []
+  var split = string.split("")
+  for (let i=0; i<split.length; i++) {
+    if (!vowels.includes(split[i])) {
+      arr1.push(split[i])
+    }
+  }
+  return finalArr = arr1.join("")
+}
+console.log(removeVowels(message));
+
 // Stretch: Update your function to throw an exception if the argument is not a string.
 var message = 10
 
@@ -88,7 +102,7 @@ function noVowels(msg) {
       } return newArr.join("")
     }
   }
-console.log(noVowels(message));
+console.log(noVowels(message)); //The throw line runs and gives the error message but also gives an error at the t on throw
 
 // Super Duper Stretch: Update your function to throw a TypeError if the argument is not a string.
 
@@ -97,6 +111,20 @@ console.log(noVowels(message));
 var toonimals = [ {name: 'Itchy', animal: 'mouse'}, {name: 'Stimpy', animal: 'cat'}, {name: 'Daffy', animal: 'duck'}, {name: 'Scratchy', animal: 'cat'}, {name: 'Ren', animal: 'dog'}, {name: 'Felix', animal: 'cat'}]
 
 // 8. Write a function that takes an array like toonimals and returns an array with only the toons that are cats.
-function findCats(arr) {
 
+//Here's one way
+let catsOnly = toonimals.filter(function(obj) {
+  return obj.animal === "cat"
+)}
+console.log(catsOnly);
+
+//Refactored
+cats = (arr) => {
+  let catsOnly = arr.filter(function(value) {
+    if (value.animal === "cat") {
+      return value.name
+    }
+  }
+return catsOnly
 }
+console.log(cats(toonimals));
